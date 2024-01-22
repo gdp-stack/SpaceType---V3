@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Inclusion du fichier css pour le style du jeu -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
+    <!-- Attention, l'ordre des fichiers js est important.  -->
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/init.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>SpaceType</h1>
+        <h2>La mission : taper à la vitesse de la lumière !</h2>
+        <h3>Embarquez pour une aventure spatiale et améliorez votre dextérité au clavier.</h3>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="zoneOptions">
+            <p>Choisissez votre option et tapez la proposition qui s'affiche dans le champ en-dessous.</p>
+            <div class="optionSource">
+                <input type="radio" name="optionSource" id="facile" value="1" checked>
+                <label for="facile">Facile</label>
+                <input type="radio" name="optionSource" id="moyen" value="2">
+                <label for="moyen">Moyen</label>
+                <input type="radio" name="optionSource" id="difficile" value="3">
+                <label for="difficile">Difficile</label>
+            </div>
+        </div>
+
+        <div class="zoneProposition">
+            Azerty
+        </div>
+
+        <div class="zoneSaisie">
+            <input type="text" id="inputEcriture" name="inputEcriture">
+            <button id="btnValiderMot">Valider</button>
+        </div>
+
+        <div>Temps restant </div><div id="timerDisplay">60</div>
+
+        <div class="zoneScore">
+            Votre score : <span>0</span>
+        </div>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        @Copyright : gdp-stack. 
+    </footer>
+
+    <!-- Popup de partage -->
+    <div class="popupBackground">
+        <div class="popup">
+            <div>Partagez votre score</div>
+            <form novalidate>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                <button id="btnEnvoyerMail">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bouton pour rejouer -->
+    <div class="zoneRejoueBackground">
+        <div class="zoneRejoue">
+            <button id="btnRejoue">Rejouer</button>
+        </div>
+        <div class="zonePartage">
+            <button>Partager</button>
+        </div>
+    </div>
+
+</body>
+</html>
